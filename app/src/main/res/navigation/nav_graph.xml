@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 Chris Kottaridis
+-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/DreamCategoryFragment">
+
+    <fragment
+        android:id="@+id/DreamCategoryFragment"
+        android:name="org.joyfmi.umddictionary.DreamCategoryFragment"
+        android:label="@string/dream_category_fragment_label">
+        <action
+            android:id="@+id/action_DreamCategoryFragment_to_DreamSymbolFragment"
+            app:destination="@id/DreamSymbolFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DreamSymbolFragment"
+        android:name="org.joyfmi.umddictionary.DreamSymbolFragment"
+        android:label="@string/dream_symbol_fragment_label"
+        tools:layout="@layout/fragment_symbol_list">
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
+</navigation>

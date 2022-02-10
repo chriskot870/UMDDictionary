@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 Chris Kottaridis
+-->
+<resources>
+    <string name="app_name">UMD Dictionary</string>
+    <string name="dream_category_fragment_label">Dream Categories</string>
+    <string name="detail_prefix">Categories</string>
+    <string name="action_switch_layout">Switch Layout</string>
+    <string name="look_up_meaning">Show Symbol Meaning</string>
+    <string name="look_up_symbols">Symbols</string>
+    <string name="dream_symbol_fragment_label">Dream Symbols</string>
+</resources>

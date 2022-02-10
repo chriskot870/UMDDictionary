@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 Chris Kottaridis
+-->
+<resources>
+    <style name="Widget.Words.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">?attr/textAppearanceHeadline4</item>
+    </style>
+</resources>
