@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import org.joyfmi.umddictionary.databinding.FragmentCategoryListBinding
+import org.joyfmi.umddictionary.databinding.FragmentDreamDefinitionBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -13,7 +14,7 @@ import org.joyfmi.umddictionary.databinding.FragmentCategoryListBinding
  * create an instance of this fragment.
  */
 class DreamDefinitionFragment : Fragment() {
-    private var _binding: FragmentCategoryListBinding? = null
+    private var _binding: FragmentDreamDefinitionBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -29,7 +30,7 @@ class DreamDefinitionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Retrieve and inflate the layout for this fragment
-        _binding = FragmentCategoryListBinding.inflate(inflater, container, false)
+        _binding = FragmentDreamDefinitionBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
