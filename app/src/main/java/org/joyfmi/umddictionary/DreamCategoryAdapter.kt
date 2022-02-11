@@ -75,7 +75,7 @@ class DreamCategoryAdapter(context: Context) :
 
         // Assigns a [OnClickListener] to the button contained in the [ViewHolder]
         holder.button.setOnClickListener {
-            // Create an action from WordList to DetailList
+            // Create an action from DreamCategory view to DreamSymbol view
             // using the required arguments
             val action = DreamCategoryFragmentDirections.actionDreamCategoryFragmentToDreamSymbolFragment(category = holder.button.text.toString())
             // Navigate using that action

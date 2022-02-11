@@ -13,7 +13,9 @@ import android.view.ViewGroup
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Button
 import androidx.annotation.RequiresApi
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import org.joyfmi.umddictionary.DreamSymbolFragmentDirections.Companion.actionDreamSymbolFragmentToDreamDefinitionFragment
 
 /**
  * Adapter for the [RecyclerView] in Dream Symbol Fragment.
@@ -64,9 +66,12 @@ class DreamSymbolAdapter(private val letterId: String, context: Context) :
 
         // Assigns a [OnClickListener] to the button contained in the [ViewHolder]
         holder.button.setOnClickListener {
-            val queryUrl: Uri = Uri.parse("${DreamSymbolFragment.SEARCH_PREFIX}${item}")
-            val intent = Intent(Intent.ACTION_VIEW, queryUrl)
-            context.startActivity(intent)
+            // Create an action from DreamCategory view to DreamSymbol view
+            // using the required arguments
+            val symbol = holder.button.text.toString()
+            val action = DreamSymbolFragmentDirections.actionDreamSymbolFragmentToDreamDefinitionFragment(symbol)
+            // Navigate using that action
+            holder.view.findNavController().navigate(action)
         }
     }
 

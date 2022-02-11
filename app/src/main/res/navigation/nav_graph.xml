@@ -24,5 +24,17 @@
         <argument
             android:name="category"
             app:argType="string" />
+        <action
+            android:id="@+id/action_DreamSymbolFragment_to_DreamDefinitionFragment"
+            app:destination="@id/DreamDefinitionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DreamDefinitionFragment"
+        android:name="org.joyfmi.umddictionary.DreamDefinitionFragment"
+        android:label="fragment_dream_definition"
+        tools:layout="@layout/fragment_dream_definition">
+        <argument
+            android:name="symbol"
+            app:argType="string" />
     </fragment>
 </navigation>
